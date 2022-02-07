@@ -11,7 +11,7 @@ function calculate(){
         roundVal = Number.parseInt(document.querySelector("#decimals").value, 10);
     }
 
-    if (firstVal === NaN || secondVal === NaN || roundVal === NaN){
+    if (isNaN(firstVal) || isNaN(secondVal) || (doround && isNaN(roundVal))){
         console.error("only numbers can be calculated!");
         return;
     }
